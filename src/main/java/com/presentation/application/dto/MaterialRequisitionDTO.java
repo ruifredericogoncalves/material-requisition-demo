@@ -1,6 +1,7 @@
 package com.presentation.application.dto;
 
 import com.presentation.core.MaterialRequisitionMessage;
+import com.presentation.domain.MaterialType;
 
 import java.util.Date;
 
@@ -16,7 +17,7 @@ public final class MaterialRequisitionDTO extends MaterialRequisitionMessage{
     private String username;
     private String name;
     private String email;
-    private String materialType;
+    private MaterialType materialType;
     private String quantity;
     private int numberOfDays;
     private Date startDate;
@@ -57,11 +58,11 @@ public final class MaterialRequisitionDTO extends MaterialRequisitionMessage{
         this.email = email;
     }
 
-    public String getMaterialType() {
+    public MaterialType getMaterialType() {
         return materialType;
     }
 
-    public void setMaterialType(final String materialType) {
+    public void setMaterialType(final MaterialType materialType) {
         this.materialType = materialType;
     }
 

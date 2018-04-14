@@ -1,7 +1,6 @@
 package com.presentation.domain;
 
 import com.presentation.domain.core.BaseEntity;
-import org.hibernate.annotations.TypeDef;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -18,7 +17,7 @@ public class MaterialRequisition extends BaseEntity {
     private String username;
     private String name;
     private String email;
-    private String materialType;
+    private MaterialType materialType;
     private String quantity;
     private int numberOfDays;
     private Date startDate;
@@ -29,7 +28,7 @@ public class MaterialRequisition extends BaseEntity {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(final String userId) {
         this.userId = userId;
     }
 
@@ -37,7 +36,7 @@ public class MaterialRequisition extends BaseEntity {
         return username;
     }
 
-    public void setUsername(String username) {
+    public void setUsername(final String username) {
         this.username = username;
     }
 
@@ -45,7 +44,7 @@ public class MaterialRequisition extends BaseEntity {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
@@ -53,15 +52,15 @@ public class MaterialRequisition extends BaseEntity {
         return email;
     }
 
-    public void setEmail(String email) {
+    public void setEmail(final String email) {
         this.email = email;
     }
 
-    public String getMaterialType() {
+    public MaterialType getMaterialType() {
         return materialType;
     }
 
-    public void setMaterialType(String materialType) {
+    public void setMaterialType(final MaterialType materialType) {
         this.materialType = materialType;
     }
 
@@ -69,7 +68,7 @@ public class MaterialRequisition extends BaseEntity {
         return quantity;
     }
 
-    public void setQuantity(String quantity) {
+    public void setQuantity(final String quantity) {
         this.quantity = quantity;
     }
 
@@ -77,7 +76,7 @@ public class MaterialRequisition extends BaseEntity {
         return numberOfDays;
     }
 
-    public void setNumberOfDays(int numberOfDays) {
+    public void setNumberOfDays(final int numberOfDays) {
         this.numberOfDays = numberOfDays;
     }
 
@@ -85,7 +84,7 @@ public class MaterialRequisition extends BaseEntity {
         return startDate;
     }
 
-    public void setStartDate(Date startDate) {
+    public void setStartDate(final Date startDate) {
         this.startDate = startDate;
     }
 
@@ -93,7 +92,7 @@ public class MaterialRequisition extends BaseEntity {
         return endDate;
     }
 
-    public void setEndDate(Date endDate) {
+    public void setEndDate(final Date endDate) {
         this.endDate = endDate;
     }
 }

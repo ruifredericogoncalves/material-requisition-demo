@@ -10,17 +10,19 @@ public class MaterialRequisitionAssembler {
     /**
      * Method to convert an entity to a DTO. A MaterialRequisition to a MaterialRequisitionDTO.
      *
-     * @param materialRequistion object that represents a MaterialRequistion
+     * @param materialRequisition object that represents a MaterialRequistion
      * @return MaterialRequisitionDTO object that contains the details of the material requisition.
      */
-    public static MaterialRequisitionDTO convertToDTO(final MaterialRequisition materialRequistion) {
+    public static MaterialRequisitionDTO convertToDTO(final MaterialRequisition materialRequisition) {
         MaterialRequisitionDTO materialRequisitionDTO = new MaterialRequisitionDTO();
-        materialRequisitionDTO.setUserId(materialRequistion.getUserId());
-        materialRequisitionDTO.setName(materialRequistion.getName());
-        materialRequisitionDTO.setUsername(materialRequistion.getUsername());
-        materialRequisitionDTO.setStartDate(materialRequistion.getStartDate());
-        materialRequisitionDTO.setEndDate(materialRequistion.getEndDate());
-        materialRequisitionDTO.setEmail(materialRequistion.getEmail());
+        materialRequisitionDTO.setUserId(materialRequisition.getUserId());
+        materialRequisitionDTO.setName(materialRequisition.getName());
+        materialRequisitionDTO.setUsername(materialRequisition.getUsername());
+        materialRequisitionDTO.setStartDate(materialRequisition.getStartDate());
+        materialRequisitionDTO.setEndDate(materialRequisition.getEndDate());
+        materialRequisitionDTO.setEmail(materialRequisition.getEmail());
+        materialRequisitionDTO.setMaterialType(materialRequisition.getMaterialType());
+        materialRequisitionDTO.setQuantity(materialRequisition.getQuantity());
 
         return materialRequisitionDTO;
     }
@@ -41,6 +43,7 @@ public class MaterialRequisitionAssembler {
         materialRequisition.setUserId(materialRequisitionDTO.getUserId());
         materialRequisition.setEmail(materialRequisitionDTO.getEmail());
         materialRequisition.setNumberOfDays(materialRequisitionDTO.getNumberOfDays());
+        materialRequisition.setMaterialType(materialRequisitionDTO.getMaterialType());
         materialRequisition.setQuantity(materialRequisitionDTO.getQuantity());
         return materialRequisition;
     }
