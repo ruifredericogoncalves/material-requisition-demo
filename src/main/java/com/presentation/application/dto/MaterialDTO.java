@@ -1,16 +1,11 @@
-package com.presentation.domain;
-
-import com.presentation.domain.core.BaseEntity;
-
-import javax.persistence.Entity;
-import javax.persistence.Table;
+package com.presentation.application.dto;
 
 /**
- * Created by rj
+ * DTO for material requisition used on API calls.
+ * <p>
+ * 7.
  */
-@Entity
-@Table(name = "material")
-public class Material extends BaseEntity {
+public final class MaterialDTO {
 
     private String materialType;
     private int quantity;
@@ -31,5 +26,4 @@ public class Material extends BaseEntity {
         this.quantity = quantity;
     }
 }
-
 

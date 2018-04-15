@@ -1,0 +1,16 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet author="material-requistion-demo" id="002">
+        <createTable tableName="material">
+            <column name="id" type="varchar(36)"/>
+            <column name="material_type" type="varchar(50)"/>
+            <column name="quantity" type="int"/>
+        </createTable>
+        <rollback>
+            <dropTable tableName="material"/>
+        </rollback>
+    </changeSet>
+</databaseChangeLog>

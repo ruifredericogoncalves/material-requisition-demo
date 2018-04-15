@@ -5,6 +5,7 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
 
-    <!--<include file="db/changelog/v1.0.0/insert-jumo-representative-type-email.xml"/> -->
+    <include file="db/changelog/v1.0.0/001-create-table-materialrequisition.xml"/>
+    <include file="db/changelog/v1.0.0/002-create-table-material.xml"/>
 
 </databaseChangeLog>

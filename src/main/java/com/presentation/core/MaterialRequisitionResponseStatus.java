@@ -1,5 +1,7 @@
 package com.presentation.core;
 
+import com.presentation.domain.MaterialRequisition;
+
 /**
  * Created by rjnascimento on 13/04/2018.
  */
@@ -7,6 +9,11 @@ public class MaterialRequisitionResponseStatus {
     private MaterialRequisitionStatus status;
     private String errorCode;
     private String errorMessage;
+
+    public MaterialRequisitionResponseStatus(MaterialRequisitionStatus status){
+        this.status = status;
+    }
+
 
     public MaterialRequisitionStatus getStatus() {
         return status;

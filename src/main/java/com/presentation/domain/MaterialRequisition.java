@@ -10,15 +10,15 @@ import java.util.Date;
  * Created by rjnascimento on 13/04/2018.
  */
 @Entity
-@Table(name = "MaterialRequisition")
+@Table(name = "material_rsequisition")
 public class MaterialRequisition extends BaseEntity {
 
     private String userId;
     private String username;
     private String name;
     private String email;
-    private MaterialType materialType;
-    private String quantity;
+    private String materialType;
+    private int quantity;
     private int numberOfDays;
     private Date startDate;
     private Date endDate;
@@ -56,19 +56,19 @@ public class MaterialRequisition extends BaseEntity {
         this.email = email;
     }
 
-    public MaterialType getMaterialType() {
+    public String getMaterialType() {
         return materialType;
     }
 
-    public void setMaterialType(final MaterialType materialType) {
+    public void setMaterialType(final String materialType) {
         this.materialType = materialType;
     }
 
-    public String getQuantity() {
+    public int getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(final String quantity) {
+    public void setQuantity(final int quantity) {
         this.quantity = quantity;
     }
 
