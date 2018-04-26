@@ -1,14 +1,7 @@
-FROM openjdk:8-alpine
+FROM openjdk:8u111-jdk-alpine
 
-# general needed stuff
-RUN apk update && \
-  apk add curl openssh-client bash
+ADD /target/material-requisition-demo-0.0.1-SNAPSHOT.jar material-requisition-demo.jar
 
-# install maven and project dependecies
-COPY pom.xml ./
-RUN apk add maven && \
-  mvn dependency:go-offline
+EXPOSE 8085
 
-# install postgres
-ENV PGDATA /var/lib/postgresql/data
-RUN apk add postgresql
+ENTRYPOINT ["java","-jar","/app.jar"]
