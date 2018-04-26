@@ -1,16 +1,19 @@
 package com.presentation.core;
 
-import com.sun.xml.internal.ws.server.sei.MessageFiller;
 
 /**
- * Created by rjnascimento on 14/04/2018.
+ * Material Requisition Response.
+ *
+ * @param <MaterialRequisitionHeader> Header.
+ * @param <T>                         Body.
  */
 public class MaterialRequisitionResponse<MaterialRequisitionHeader, T> {
 
-    MaterialRequisitionHeader header;
-    T body;
+    private final MaterialRequisitionHeader header;
+    private final T body;
 
-    public MaterialRequisitionResponse(MaterialRequisitionHeader header, T body) {
+
+    public MaterialRequisitionResponse(final MaterialRequisitionHeader header, final T body) {
         this.header = header;
         this.body = body;
     }
@@ -19,16 +22,10 @@ public class MaterialRequisitionResponse<MaterialRequisitionHeader, T> {
         return header;
     }
 
-    public void setHeader(MaterialRequisitionHeader header) {
-        this.header = header;
-    }
 
     public T getBody() {
         return body;
     }
 
-    public void setBody(T body) {
-        this.body = body;
-    }
 }
 

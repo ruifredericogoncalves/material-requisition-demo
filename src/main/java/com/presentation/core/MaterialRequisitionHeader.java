@@ -5,13 +5,16 @@ import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 import java.util.UUID;
 
+/**
+ * Material requisition header.
+ */
 public class MaterialRequisitionHeader {
     private String messageId;
     private String timestamp;
     private MaterialRequisitionResponseStatus responseStatus;
 
 
-    public MaterialRequisitionHeader(MaterialRequisitionResponseStatus responseStatus)  {
+    public MaterialRequisitionHeader(final MaterialRequisitionResponseStatus responseStatus)  {
         this.messageId = UUID.randomUUID().toString();
         this.timestamp = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssX")
                 .withZone(ZoneOffset.UTC).format(Instant.now());

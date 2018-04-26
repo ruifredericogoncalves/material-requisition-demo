@@ -1,7 +1,6 @@
 package com.presentation.infrastructure.persistence;
 
 import com.presentation.domain.Material;
-import com.presentation.domain.MaterialType;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

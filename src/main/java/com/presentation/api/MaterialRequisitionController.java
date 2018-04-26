@@ -43,7 +43,7 @@ import java.util.List;
 public class MaterialRequisitionController {
 
     @Autowired
-    MaterialRequisitionService materialRequisitionService;
+    private MaterialRequisitionService materialRequisitionService;
 
     /**
      * Create a material requisition.
@@ -77,7 +77,8 @@ public class MaterialRequisitionController {
     public ResponseEntity availableMaterialList() {
         List<MaterialDTO> availableMaterial = materialRequisitionService.getAllAvailableMaterial();
 
-        MaterialRequisitionResponseStatus responseStatus = new MaterialRequisitionResponseStatus(MaterialRequisitionStatus.SUCCESS);
+        MaterialRequisitionResponseStatus responseStatus = new MaterialRequisitionResponseStatus();
+        responseStatus.setStatus(MaterialRequisitionStatus.SUCCESS);
         MaterialRequisitionResponse materialRequisitionResponse = new MaterialRequisitionResponse<>(new MaterialRequisitionHeader(responseStatus), availableMaterial);
 
         return new ResponseEntity<>(materialRequisitionResponse, HttpStatus.OK);

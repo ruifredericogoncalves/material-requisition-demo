@@ -1,14 +1,12 @@
 package com.presentation.application.dto;
 
 import com.presentation.core.MaterialRequisitionMessage;
-import com.presentation.domain.MaterialType;
 
 import java.util.Date;
 
 /**
  * DTO for material requisition used on API calls.
  * <p>
- * 7.
  */
 public final class MaterialRequisitionDTO extends MaterialRequisitionMessage {
 
@@ -78,7 +76,7 @@ public final class MaterialRequisitionDTO extends MaterialRequisitionMessage {
         return numberOfDays;
     }
 
-    public void setNumberOfDays(int numberOfDays) {
+    public void setNumberOfDays(final int numberOfDays) {
         this.numberOfDays = numberOfDays;
     }
 
@@ -86,7 +84,7 @@ public final class MaterialRequisitionDTO extends MaterialRequisitionMessage {
         return startDate;
     }
 
-    public void setStartDate(Date startDate) {
+    public void setStartDate(final Date startDate) {
         this.startDate = startDate;
     }
 
@@ -94,7 +92,7 @@ public final class MaterialRequisitionDTO extends MaterialRequisitionMessage {
         return endDate;
     }
 
-    public void setEndDate(Date endDate) {
+    public void setEndDate(final Date endDate) {
         this.endDate = endDate;
     }
 }

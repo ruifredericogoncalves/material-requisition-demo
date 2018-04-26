@@ -2,8 +2,6 @@ package com.presentation.application.dto;
 
 /**
  * DTO for material requisition used on API calls.
- * <p>
- * 7.
  */
 public final class MaterialDTO {
 
@@ -14,7 +12,7 @@ public final class MaterialDTO {
         return materialType;
     }
 
-    public void setMaterialType(String materialType) {
+    public void setMaterialType(final String materialType) {
         this.materialType = materialType;
     }
 
@@ -22,7 +20,7 @@ public final class MaterialDTO {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
+    public void setQuantity(final int quantity) {
         this.quantity = quantity;
     }
 }

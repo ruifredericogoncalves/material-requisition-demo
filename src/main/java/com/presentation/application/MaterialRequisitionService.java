@@ -29,10 +29,12 @@ public class MaterialRequisitionService {
     private MaterialRequisitionRepository materialRequisitionRepository;
 
     /**
+     * Create material requisition.
+     *
      * @param materialRequisitionDTO
-     * @return
+     * @return material requisition.
      */
-    public MaterialRequisitionDTO createMaterialRequisition(MaterialRequisitionDTO materialRequisitionDTO) {
+    public MaterialRequisitionDTO createMaterialRequisition(final MaterialRequisitionDTO materialRequisitionDTO) {
         return null;
     }
 

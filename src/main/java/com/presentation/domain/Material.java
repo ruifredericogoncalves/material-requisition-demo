@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 /**
- * Created by rj
+ * Entity Material.
  */
 @Entity
 @Table(name = "material")
@@ -19,7 +19,7 @@ public class Material extends BaseEntity {
         return materialType;
     }
 
-    public void setMaterialType(String materialType) {
+    public void setMaterialType(final String materialType) {
         this.materialType = materialType;
     }
 
@@ -27,7 +27,7 @@ public class Material extends BaseEntity {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
+    public void setQuantity(final int quantity) {
         this.quantity = quantity;
     }
 }

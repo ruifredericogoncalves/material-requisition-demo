@@ -6,15 +6,15 @@ package com.presentation.domain;
 public enum MaterialType {
 
     /**
-     * BOOK
+     * Book.
      */
     BOOK,
     /**
-     * Monitor
+     * Monitor.
      */
     MONITOR,
     /**
-     * Laptop
+     * Laptop.
      */
     LAPTOP
 }
