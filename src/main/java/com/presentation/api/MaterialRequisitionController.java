@@ -68,6 +68,31 @@ public class MaterialRequisitionController {
     }
 
     /**
+     * Create a material devolution.
+     *
+     * @param
+     * @return ResponseEntity with status code CREATED and a materialRequisitionDTO object if everything is ok or INTERNAL_SERVER_ERROR otherwise.
+     */
+    @PostMapping(value = "/materialDevolution")
+    @ApiOperation(value = "Create a material devolution", notes = "Creates a material devolution.")
+    @ApiResponses(value = {@ApiResponse(code = 500, message = "Devolution not created."),
+            @ApiResponse(code = 201, message = "Material devolution created")})
+    public ResponseEntity createMaterialDevolution(@RequestBody final MaterialRequisitionDTO materialRequisitionDTO) {
+
+        ResponseEntity responseEntity;
+        MaterialRequisitionDTO newMaterialDevolution = materialRequisitionService.createMaterialRequisition(materialRequisitionDTO);
+        if (newMaterialDevolution!= null) {
+            responseEntity = new ResponseEntity<>(newMaterialDevolution, HttpStatus.CREATED);
+        } else {
+            responseEntity = new ResponseEntity<>(newMaterialDevolution, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+        return responseEntity;
+    }
+
+
+
+
+    /**
      * Get all materialAvailable from the database.
      *
      * @return list of available material.

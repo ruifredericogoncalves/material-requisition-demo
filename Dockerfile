@@ -4,4 +4,4 @@ ADD /target/material-requisition-demo-0.0.1-SNAPSHOT.jar material-requisition-de
 
 EXPOSE 8085
 
-ENTRYPOINT ["java","-jar","/app.jar"]
+ENTRYPOINT ["java","-jar","/material-requisition-demo.jar"]

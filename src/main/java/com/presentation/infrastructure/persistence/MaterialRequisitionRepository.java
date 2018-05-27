@@ -3,6 +3,7 @@ package com.presentation.infrastructure.persistence;
 import com.presentation.domain.MaterialRequisition;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -11,4 +12,5 @@ import java.util.Optional;
 public interface MaterialRequisitionRepository extends JpaRepository<MaterialRequisition, Long> {
 
     Optional<MaterialRequisition> findById(String id);
+    List<MaterialRequisition> findAllByMaterialType(String materialType);
 }
