@@ -31,3 +31,7 @@ http://start.spring.io/
   "userId": "rui",
   "username": "Rui"
 }
+
+docker build  -f Dockerfile -t mujiks/material-requisition-demo .
+docker push mujiks/material-requisition-demo
+docker run -8085 mujiks/material-requisition-demo --name demo
