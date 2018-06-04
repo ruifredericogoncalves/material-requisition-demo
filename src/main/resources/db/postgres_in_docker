@@ -8,3 +8,26 @@ docker exec -it material_requisition_db psql -U postgres -f ./resources/db/scrip
 
 # spring boot and docker
 http://start.spring.io/
+
+# others
+
+{
+  "email": "mail@rui.pt",
+  "endDate": "2018-06-04T20:51:52.276Z",
+  "materialType": "LAPTOP",
+  "name": "devo1",
+  "quantity": 2,
+  "userId": "rui",
+  "username": "Rui"
+}
+
+{
+  "email": "mail@rui.pt",
+  "materialType": "LAPTOP",
+  "name": "req1",
+  "numberOfDays": 10,
+  "quantity": 1,
+  "startDate": "2018-06-04T20:51:52.338Z",
+  "userId": "rui",
+  "username": "Rui"
+}

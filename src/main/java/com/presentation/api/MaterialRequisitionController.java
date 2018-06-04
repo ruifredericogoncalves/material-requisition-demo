@@ -80,7 +80,7 @@ public class MaterialRequisitionController {
     public ResponseEntity createMaterialDevolution(@RequestBody final MaterialRequisitionDTO materialRequisitionDTO) {
 
         ResponseEntity responseEntity;
-        MaterialRequisitionDTO newMaterialDevolution = materialRequisitionService.createMaterialRequisition(materialRequisitionDTO);
+        MaterialRequisitionDTO newMaterialDevolution = materialRequisitionService.createMaterialDevolution(materialRequisitionDTO);
         if (newMaterialDevolution!= null) {
             responseEntity = new ResponseEntity<>(newMaterialDevolution, HttpStatus.CREATED);
         } else {

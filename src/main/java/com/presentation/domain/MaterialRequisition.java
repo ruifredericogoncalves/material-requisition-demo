@@ -81,11 +81,11 @@ public class MaterialRequisition extends BaseEntity {
     }
 
     public Date getStartDate() {
-        return new Date(startDate);
+        return startDate != null ? new Date(startDate) : null;
     }
 
     public void setStartDate(final Date startDate) {
-        this.startDate = startDate.getTime();
+        this.startDate = startDate != null ? startDate.getTime() : null;
     }
 
     public Date getEndDate() {

@@ -75,7 +75,7 @@ public class MaterialRequisitionService {
 
         Assert.notNull(materialType, "Material type not defined.");
 
-        Material material = getAvailableMaterialByType(materialType);
+        Material material = getMaterialByType(materialType);
         if (material != null) {
             // create material requisition
             materialRequisition = materialRequisitionRepository.save(materialRequisition);
@@ -105,6 +105,11 @@ public class MaterialRequisitionService {
     private Material getAvailableMaterialByType(final String materialType) {
         Optional<Material> availableMaterial = materialRepository.findByMaterialTypeAndQuantityGreaterThan(materialType, ZERO);
         return availableMaterial.isPresent() ? availableMaterial.get() : null;
+    }
+
+    private Material getMaterialByType(final String materialType) {
+        Optional<Material> material = materialRepository.findByMaterialType(materialType);
+        return material.isPresent() ? material.get() : null;
     }
 
 
