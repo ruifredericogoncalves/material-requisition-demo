@@ -103,7 +103,7 @@ public class MaterialRequisitionService {
 
 
     private Material getAvailableMaterialByType(final String materialType) {
-        Optional<Material> availableMaterial = materialRepository.findByMaterialTypeAndByQuantityGreaterThan(materialType, ZERO);
+        Optional<Material> availableMaterial = materialRepository.findByMaterialTypeAndQuantityGreaterThan(materialType, ZERO);
         return availableMaterial.isPresent() ? availableMaterial.get() : null;
     }
 

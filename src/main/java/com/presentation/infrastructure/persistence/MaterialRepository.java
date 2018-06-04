@@ -15,7 +15,7 @@ public interface MaterialRepository extends JpaRepository<Material, Long> {
 
     Optional<Material> findByMaterialType(String materialType);
 
-    Optional<Material> findByMaterialTypeAndByQuantityGreaterThan(String materialType, int quantity);
+    Optional<Material> findByMaterialTypeAndQuantityGreaterThan(String materialType, int quantity);
 
     List<Material> findByQuantityGreaterThan(int quantity);
 

@@ -10,7 +10,7 @@ import java.util.Date;
  * Created by rjnascimento on 13/04/2018.
  */
 @Entity
-@Table(name = "material_rsequisition")
+@Table(name = "material_requisition")
 public class MaterialRequisition extends BaseEntity {
 
     private String userId;
@@ -20,8 +20,8 @@ public class MaterialRequisition extends BaseEntity {
     private String materialType;
     private int quantity;
     private int numberOfDays;
-    private Date startDate;
-    private Date endDate;
+    private Long startDate;
+    private Long endDate;
 
 
     public String getUserId() {
@@ -81,18 +81,18 @@ public class MaterialRequisition extends BaseEntity {
     }
 
     public Date getStartDate() {
-        return startDate;
+        return new Date(startDate);
     }
 
     public void setStartDate(final Date startDate) {
-        this.startDate = startDate;
+        this.startDate = startDate.getTime();
     }
 
     public Date getEndDate() {
-        return endDate;
+        return endDate != null ? new Date(endDate) : null;
     }
 
     public void setEndDate(final Date endDate) {
-        this.endDate = endDate;
+        this.endDate = endDate != null ? endDate.getTime() : null;
     }
 }
