@@ -14,6 +14,16 @@ public class MaterialRequisitionHeader {
     private MaterialRequisitionResponseStatus responseStatus;
 
 
+    public MaterialRequisitionHeader()  {
+        this.messageId = UUID.randomUUID().toString();
+        this.timestamp = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssX")
+                .withZone(ZoneOffset.UTC).format(Instant.now());
+        this.responseStatus =new MaterialRequisitionResponseStatus();
+        this.responseStatus.setStatus(MaterialRequisitionStatus.SUCCESS);
+    }
+
+
+
     public MaterialRequisitionHeader(final MaterialRequisitionResponseStatus responseStatus)  {
         this.messageId = UUID.randomUUID().toString();
         this.timestamp = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssX")
