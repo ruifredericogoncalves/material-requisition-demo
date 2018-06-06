@@ -4,7 +4,6 @@ import com.presentation.application.MaterialRequisitionService;
 import com.presentation.application.dto.MaterialDTO;
 import com.presentation.application.dto.MaterialRequisitionDTO;
 import com.presentation.core.MaterialRequisitionHeader;
-import com.presentation.core.MaterialRequisitionMessage;
 import com.presentation.core.MaterialRequisitionResponse;
 import com.presentation.core.MaterialRequisitionResponseStatus;
 import com.presentation.core.MaterialRequisitionStatus;
@@ -84,7 +83,7 @@ public class MaterialRequisitionController {
         ResponseEntity responseEntity;
         MaterialRequisitionDTO newMaterialDevolution = materialRequisitionService.createMaterialDevolution(materialRequisitionDTO);
 
-        if (newMaterialDevolution!= null) {
+        if (newMaterialDevolution != null) {
             newMaterialDevolution.setHeader(new MaterialRequisitionHeader());
             responseEntity = new ResponseEntity<>(newMaterialDevolution, HttpStatus.CREATED);
         } else {
@@ -92,8 +91,6 @@ public class MaterialRequisitionController {
         }
         return responseEntity;
     }
-
-
 
 
     /**
