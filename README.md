@@ -29,7 +29,7 @@ docker exec -it material_requisition_db psql -U postgres -f /scripts/insert_mate
 Don't forget to docker login first
 docker build  -f Dockerfile -t mujiks/material-requisition-demo .
 docker push mujiks/material-requisition-demo
-docker run -8085 mujiks/material-requisition-demo --name demo
+docker run -p 8085:8085 mujiks/material-requisition-demo --name demo
 
 ## Now try to perform some devolutions and requisitions
 
