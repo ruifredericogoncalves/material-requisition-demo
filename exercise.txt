@@ -1,0 +1,32 @@
+* The challenge is to put up and run this service/app or a similar if you have. So basically, you should be able to
+have an web application and a database for it.
+
+Assumptions
+-----------
+
+You don't need to build the application.
+You don't need to know JAVA.
+You need to have access to GIT.
+You need to have access to DOCKER HUB.
+
+** If you are using this application
+The image is already in docker hub in a public repository: mujiks/material-requisition-demo
+You should get all the information from README.MD
+
+
+Important links
+https://github.com/mujiks/material-requisition-demo
+https://hub.docker.com/r/mujiks/material-requisition-demo/
+
+
+
+
+Acceptance criteria
+-------------------
+Retrieve the application from docker hub.
+Run the application.
+And the application should be available and playable on a browser.
+    If you are using this application, you should access to:
+        http://<host>:8085/swagger-ui.html
+
+

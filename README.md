@@ -35,7 +35,9 @@ docker run -p 8085:8085 mujiks/material-requisition-demo --name demo
 
 You can try with:
 
-http://<docker_host>:8085/swagger-ui.html
+http://<host>:8085/swagger-ui.html
+
+Some of the payloads to test a devolution and a requisition:
 
 {
   "email": "mail@rui.pt",
