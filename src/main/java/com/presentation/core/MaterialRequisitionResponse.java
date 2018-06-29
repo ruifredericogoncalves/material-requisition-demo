@@ -16,6 +16,7 @@ public class MaterialRequisitionResponse<MaterialRequisitionHeader, T> {
     public MaterialRequisitionResponse(final MaterialRequisitionHeader header, final T body) {
         this.header = header;
         this.body = body;
+		
     }
 
     public MaterialRequisitionHeader getHeader() {
