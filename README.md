@@ -21,15 +21,19 @@ http://start.spring.io/
 ## Example to run a postgres container
 docker run -p 5432:5432 --name material_requisition_db -e POSTGRES_PASSWORD=admin -d postgres
 
-## Populate the database with some data
+## Create database
 docker exec -it material_requisition_db psql -U postgres -c "CREATE DATABASE demo;"
-docker exec -it material_requisition_db psql -U postgres -f /scripts/insert_material.sql
 
 ## Example to build and push your application into docker_hub
 Don't forget to docker login first
 docker build  -f Dockerfile -t mujiks/material-requisition-demo .
 docker push mujiks/material-requisition-demo
 docker run -p 8085:8085 mujiks/material-requisition-demo --name demo
+
+# Populate the database with some data
+docker exec -it material_requisition_db psql -U postgres -f /scripts/insert_material.sql
+(or just create your onwn records, you can download "pgadmin")
+
 
 ## Now try to perform some devolutions and requisitions
 
